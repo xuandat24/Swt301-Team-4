@@ -73,38 +73,7 @@
                                         </c:url>
                                         <a href="${linkPlant}" class="text-decoration-none">${C.value.plant.id}</a>
                                     </td><input type="hidden" name="productId" value="${C.value.plant.id}">
-                                    <td>
-                                        <a href="${linkPlant}">
-                                            <img src="${C.value.plant.imgPath}" width="100">
-                                        </a>
-                                    </td>
-                                    <td>${C.value.plant.name}</td>
-                                    <td>$${C.value.plant.price}</td>
-                                    <td>${C.value.quantity}</td>
-                                    <td>$${C.value.plant.price * C.value.quantity}</td>
-                                    <c:set var="total" scope="request" value="${total + C.value.plant.price * C.value.quantity}"/>
-                                    </tr>
-                                </c:forEach>
-                                </tbody>
-                            </table>
-                            <h3 class="text-end default-cursor text-black">Total Amount: <span style="color: red;">$${not empty totalMoney ? totalMoney : total}</span></h3>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 rounded shadow p-3 bg-body text-black" style="height: 460px;">
-                        <h3 class="mb-3">Information Customer</h3>
-                        <form action="OrderAgainController" method="POST">
-                            <div class="mb-3">
-                                <label for="name" class="form-label">Name</label>
-                                <input type="text" class="form-control" id="name" name="name" value="${sessionScope.LOGIN_USER.fullName}">
-                            </div>
-                            <div class="mb-3">
-                                <label for="phone" class="form-label">Phone</label>
-                                <input type="text" class="form-control" id="phone" name="phone" value="${sessionScope.LOGIN_USER.phone}" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="address" class="form-label">Address</label>
-                                <input type="text" class="form-control" id="address" name="address" required="">
-                            </div>
+                            
                             <div class="mb-3">
                                 <label for="note" class="form-label">Note</label>
                                 <textarea type="text" class="form-control" id="note" name="note"></textarea>
@@ -120,14 +89,7 @@
         <!-- Bootstrap core JS -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS -->
-        <script src="js/scripts.js"></script>
-        <!-- Jquery -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <!-- Home Slider JS -->
-        <script src="vendor/slick/slick.min.js"></script>
-        <script src="js/slick-custom.js"></script>
-<script src="vendor/animsition/js/animsition.min.js"></script>
-<script src="vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+        <script src="js/srollbar/perfect-scrollbar.min.js"></script>
         <script>
                                                     $('.js-pscroll').each(function () {
                                                         $(this).css('position', 'relative');
